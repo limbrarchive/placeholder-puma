@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 BODY = "Puma Placeholder\n"
 
-tag 'Placeholder'
+tag "Placeholder"
 
-app do |env|
+app do |_env|
   [
     200,
     {
-      'Content-Type' => 'text/plain',
-      'Content-Length' => BODY.length.to_s
+      "Content-Type"   => "text/plain",
+      "Content-Length" => BODY.length.to_s
     },
     [BODY]
   ]
